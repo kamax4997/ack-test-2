@@ -1,0 +1,80 @@
+{
+  "OPERATION": {
+    "READ": "read",
+    "UPDATE": "update",
+    "CREATE": "create",
+    "DELETE": "delete"
+  },
+  "SCOPES": {
+    "USER_PROFILE": "userProfile",
+    "EMPLOYEE_PROFILE": "employeeProfile",
+    "BADGE": "badge"
+  },
+  "GROUPS": {
+    "VOLUNTEERS": {
+      "PERMISSIONS": {
+        "BADGE": [
+          "READ"
+        ]
+      }
+    }
+  },
+  "USERS": [
+    {
+      "ADMIN": {
+        "PERMISSIONS": {
+          "USER_PROFILE": [
+            "UPDATE",
+            "DELETE"
+          ],
+          "BADGE": [
+            "CREATE",
+            "UPDATE",
+            "DELETE"
+          ]
+        }
+      }
+    },
+    [[
+        [
+          {
+            "HR": {              
+              "PERMISSIONS": {
+                "USER_PROFILE": [
+                  "CREATE",
+                  "READ",
+                  "UPDATE"
+                ],
+                "EMPLOYEE_PROFILE": [
+                  "CREATE",
+                  "READ",
+                  "UPDATE"
+                ]
+              }
+            }
+          },
+          {
+            "STAFF": {
+              "GROUPS": ["VOLUNTEERS"],
+              "PERMISSIONS": {                
+                "EMPLOYEE_PROFILE": [
+                  "READ"
+                ]
+              }
+            }
+          }
+        ]
+    ]],
+    {
+      "USER": {
+        "GROUPS": ["VOLUNTEERS"],
+        "PERMISSIONS": {
+          "USER_PROFILE": [
+            "READ",
+            "UPDATE"
+          ]
+        }
+      }
+    }
+  ]
+}

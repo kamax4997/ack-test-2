@@ -1,0 +1,5 @@
+{
+  "PRIVATE_PREFIX": "_",
+  "DEPTH_LIMIT": 5,
+  "MAX_COST": 1000
+}

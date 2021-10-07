@@ -1,0 +1,11 @@
+{
+  "git.ignoreLimitWarning": true,
+  "eslint.codeActionsOnSave.mode": "all",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSaveMode": "file",
+  "eslint.alwaysShowStatus": false,
+  "editor.formatOnSave": false,
+  "eslint.workingDirectories": ["backend", "frontend-react", "app", "frontend", "frontend-vue", "admin"]
+}

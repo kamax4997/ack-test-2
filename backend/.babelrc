@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "targets": {
+          //
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-async-generator-functions",
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "babel-plugin-bulk-import"
+    ],
+    [
+      "babel-plugin-root-import", {
+      "paths": [{
+          "rootPathPrefix": "~",
+          "rootPathSuffix": "./src"
+        },
+        {
+          "rootPathPrefix": "#",
+          "rootPathSuffix": "./"
+        },
+        {
+          "rootPathPrefix": "$",
+          "rootPathSuffix": "../"
+        }
+      ]}
+    ]
+  ]
+}
